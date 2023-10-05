@@ -63,7 +63,8 @@ public class OauthController {
         return oauthService.getKakaoLoginPage();
     }
 
-    //카카오 로그인하기
+    //카카오 로그인하기 : 이 부분 토큰 인가 추가 과정 필요
+    //로그인 oauth 결과값을 BE -> FE로 넘겨줄 때 RT토큰을 같이 보내야 함(바로 이 주소로 로그인하면 뚫리는 문제 발생, 이후 FE에서 이쪽 엔드포인트로 토큰 포함)
     @GetMapping("/kakao-login")
     @Operation(summary = "카카오 로그인", description = "1. 카카오 로그인 창에서 로그인 \n" +
             "2. 백엔드에서 로그인한 유저의 핵심 정보를 FE로 넘겨줍니다.\n" +
@@ -75,17 +76,5 @@ public class OauthController {
         if(!userRegistAndModifyRepository.isEmailExists(email)) throw new CustomException(OAUTH_KAKAO_NOT_VALID_EMAIL); //이메일 존재 체크
         return userLoginAndLogoutService.loginUserForKakao(response, email);
     }
-    //마찬가지로 유저메일 받아옴 -> 해당 메일이 존재 -> 해당 정보로 로그인
 
-//    @GetMapping("get/user-info")
-//    @Operation(summary = "사용자 정보 받아오기", description = "Token에서 뽑아온 accessToken으로 로그인 사용자가 동의한 정보 확인하기 ")
-//    public ResponseEntity<Map<String, String>> getUserInfo(@RequestParam("token") String token) {
-//        log.info("[KAKAO]액세스 토큰 입력 : {}", token);
-//        return oauthService.getUserInfo(token);
-//    }
-
-//    @GetMapping("logout")
-//    public String logout(@RequestParam("code") String code) throws JSONException {
-//
-//    }
 }
