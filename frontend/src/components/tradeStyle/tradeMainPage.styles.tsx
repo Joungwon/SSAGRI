@@ -413,14 +413,15 @@ const ProductPrice01 = styled.div`
   margin-left: 13px;
   width: 150px;
   height: 25px;
-  margin-top: 2px;
+  margin-top: 0px;
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
 `;
 const SellerLocationAndTime01 = styled.div`
   width: 150px;
   height: 17px;
-  margin-top: 3px;
+  margin-top: 7px;
   margin-left: 70px;
   font-size: 12px;
   color: #929292;
