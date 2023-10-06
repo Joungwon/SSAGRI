@@ -885,16 +885,7 @@ const DoChatting = ({ selectChat }) => {
           </ChatInput>
           <ChatMessageDivRight>
             {/* <ChatButtonMarginDiv></ChatButtonMarginDiv> */}
-            <ChatButton
-              onClick={() => sendMessage()}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter') {
-                  sendMessage();
-                }
-              }}
-            >
-              전송
-            </ChatButton>
+            <ChatButton onClick={() => sendMessage()}>전송</ChatButton>
           </ChatMessageDivRight>
         </ChatMessageTypingDiv>
       </ChatMessageTyping>
