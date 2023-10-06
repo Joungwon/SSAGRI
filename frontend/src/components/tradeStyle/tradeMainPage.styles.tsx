@@ -410,7 +410,7 @@ const ProductName01 = styled.div`
   -webkit-box-orient: vertical;
 `;
 const ProductPrice01 = styled.div`
-  margin-left: 13px;
+  margin-left: 6px;
   width: 150px;
   height: 25px;
   margin-top: 0px;
