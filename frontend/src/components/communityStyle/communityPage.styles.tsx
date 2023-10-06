@@ -348,6 +348,12 @@ const CommunityMain = () => {
     boardLife?: number;
     click: number;
   };
+  type CommuLifeItem = {
+    title: string;
+    no: number;
+    boardLife?: number;
+    click: number;
+  };
 
   useEffect(() => {
     if (inView) {
@@ -729,14 +735,14 @@ const CommunityMain = () => {
           <Lifename>곧 사라질 게시판들이에요. 활동이 필요해요!</Lifename>
 
           <FlexDiv>
-            {commuLife.map((item: CommuItem, id) => (
+            {commuLife.map((item: CommuLifeItem, id) => (
               <div key={id}>
                 <LifeTag>Top.{id + 1}</LifeTag>
                 <CommuPage
                   key={id}
                   onClick={() =>
                     navigate(
-                      `/community/${item.boardNo}?boardNo=${item.boardNo}`
+                      `/community/${item.no}?boardNo=${item.no}`
                     )
                   }
                 >
