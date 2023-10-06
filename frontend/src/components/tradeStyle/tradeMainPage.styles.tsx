@@ -446,7 +446,7 @@ const ProductPrice02 = styled(ProductPrice01)`
 `;
 const SellerLocationAndTime02 = styled(SellerLocationAndTime01)`
   margin-top: 2px;
-  margin-left: 3px;
+  margin-left: 53px;
 `;
 
 // -------------------- Product v03 -------------------------
