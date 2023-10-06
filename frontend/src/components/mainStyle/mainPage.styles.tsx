@@ -264,8 +264,7 @@ const Pages1_tag2 = styled.p`
 //   border-radius: 20px;
 //   animation:
 //     moveUpDown 1s infinite alternate,
-//     fadein 1.5s ease-in-out;
-
+//     fadein 1.5s ease-in-out
 //   @keyframes moveUpDown {
 //     0% {
 //       top: 50px;
