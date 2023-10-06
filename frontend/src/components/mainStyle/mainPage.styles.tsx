@@ -255,35 +255,35 @@ const Pages1_tag2 = styled.p`
     }
   }
 `;
-const Pages1_Img1 = styled.img`
-  width: 320px;
-  height: 200px;
-  position: absolute;
-  left: 280px;
-  top: 300px;
-  border-radius: 20px;
-  animation:
-    moveUpDown 1s infinite alternate,
-    fadein 1.5s ease-in-out;
+// const Pages1_Img1 = styled.img`
+//   width: 320px;
+//   height: 200px;
+//   position: absolute;
+//   left: 280px;
+//   top: 300px;
+//   border-radius: 20px;
+//   animation:
+//     moveUpDown 1s infinite alternate,
+//     fadein 1.5s ease-in-out;
 
-  @keyframes moveUpDown {
-    0% {
-      top: 50px;
-    }
-    100% {
-      top: 59px; /* 1초에 2vh 이동 */
-    }
-  }
+//   @keyframes moveUpDown {
+//     0% {
+//       top: 50px;
+//     }
+//     100% {
+//       top: 59px; /* 1초에 2vh 이동 */
+//     }
+//   }
 
-  @keyframes fadein {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-`;
+//   @keyframes fadein {
+//     0% {
+//       opacity: 0;
+//     }
+//     100% {
+//       opacity: 1;
+//     }
+//   }
+// `;
 
 const Pages1_Right = styled.div`
   position: relative;
@@ -1731,11 +1731,13 @@ const PageSlide = () => {
               transition: 'opacity 1.5s ease'
             }}
           >
-            <Pages1_Img1 src='/assets/img/mainicon1.PNG'></Pages1_Img1>
+            {/* <Pages1_Img1 src='/assets/img/mainicon1.PNG'></Pages1_Img1> */}
             <Pages1_tag1>
               빠르고 간단하게 <br />
               상품을 팔거나 살 수 있는
-              <span style={{ color: '#F47B55' }}>스마트한 커뮤니티 장터</span>
+              <p style={{ color: '#F47B55', marginTop: '5px' }}>
+                스마트한 커뮤니티 장터
+              </p>
             </Pages1_tag1>
             <Pages1_tag2>
               당신 근처의 지역 생활 커뮤니티. <br />

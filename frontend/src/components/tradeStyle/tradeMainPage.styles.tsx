@@ -331,8 +331,8 @@ const RecentOrPopularProductDiv = styled.div`
   width: 900px;
   height: 320px;
   /* border: 2px solid green; */
+  margin-left: 18px;
   animation: fadein 2.5s ease-in-out;
-
   @keyframes fadein {
     0% {
       opacity: 0;
