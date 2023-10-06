@@ -441,13 +441,8 @@ const ChattingDiv = () => {
     const time = new Date(inputDate);
     const timeNow = new Date();
 
-    // UTC 시간을 로컬 시간으로 변환
-    const localTime = new Date(
-      time.getTime() + time.getTimezoneOffset() * 60000
-    );
-
     // UTC+9:00 적용
-    const utcPlus9Time = new Date(localTime.getTime() + 18 * 60 * 60 * 1000);
+    const utcPlus9Time = new Date(time.getTime() + 9 * 60 * 60 * 1000);
 
     const diffSec = timeNow.getTime() - utcPlus9Time.getTime();
 
@@ -923,13 +918,8 @@ const ChatContentComp = ({ messageList, receiverProfile }) => {
   const messageFormatDate = (date) => {
     const result = new Date(date);
 
-    // UTC 시간을 로컬 시간으로 변환
-    const localTime = new Date(
-      result.getTime() + result.getTimezoneOffset() * 60000
-    );
-
     // UTC+9:00 적용
-    const utcPlus9Time = new Date(localTime.getTime() + 18 * 60 * 60 * 1000);
+    const utcPlus9Time = new Date(result.getTime() + 9 * 60 * 60 * 1000);
 
     const hour = utcPlus9Time.getHours();
 
