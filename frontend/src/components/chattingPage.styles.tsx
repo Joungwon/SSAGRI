@@ -447,7 +447,7 @@ const ChattingDiv = () => {
     );
 
     // UTC+9:00 적용
-    const utcPlus9Time = new Date(localTime.getTime() + 9 * 60 * 60 * 1000);
+    const utcPlus9Time = new Date(localTime.getTime() + 18 * 60 * 60 * 1000);
 
     const diffSec = timeNow.getTime() - utcPlus9Time.getTime();
 
@@ -698,7 +698,7 @@ const DoChatting = ({ selectChat }) => {
   const connect = () => {
     // stomp 객체 생성
     const socket = new SockJS('https://j9b209.p.ssafy.io/api/ws', null, {
-    // const socket = new SockJS('http://localhost:5000/api/ws', null, {
+      // const socket = new SockJS('http://localhost:5000/api/ws', null, {
       transports: ['websocket', 'xhr-streaming', 'xhr-polling']
     });
     const stompClient = Stomp.over(socket);
@@ -890,7 +890,16 @@ const DoChatting = ({ selectChat }) => {
           </ChatInput>
           <ChatMessageDivRight>
             {/* <ChatButtonMarginDiv></ChatButtonMarginDiv> */}
-            <ChatButton onClick={() => sendMessage()}>전송</ChatButton>
+            <ChatButton
+              onClick={() => sendMessage()}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  sendMessage();
+                }
+              }}
+            >
+              전송
+            </ChatButton>
           </ChatMessageDivRight>
         </ChatMessageTypingDiv>
       </ChatMessageTyping>
@@ -920,7 +929,7 @@ const ChatContentComp = ({ messageList, receiverProfile }) => {
     );
 
     // UTC+9:00 적용
-    const utcPlus9Time = new Date(localTime.getTime() + 9 * 60 * 60 * 1000);
+    const utcPlus9Time = new Date(localTime.getTime() + 18 * 60 * 60 * 1000);
 
     const hour = utcPlus9Time.getHours();
 

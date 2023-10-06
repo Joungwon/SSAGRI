@@ -355,8 +355,8 @@ const SignInAndUpComponent = () => {
 
   // 로그인 입력 폼
   const [signInForm, setSignInForm] = useState({
-    email: 'test@test.com',
-    password: 'test'
+    email: '',
+    password: ''
   });
 
   // 안내 메시지
