@@ -421,8 +421,10 @@ const SellerLocationAndTime01 = styled.div`
   width: 150px;
   height: 17px;
   margin-top: 3px;
+  margin-left: 70px;
   font-size: 12px;
   color: #929292;
+
 `;
 
 // -------------------- Product v02 -------------------------
@@ -446,7 +448,7 @@ const ProductPrice02 = styled(ProductPrice01)`
 `;
 const SellerLocationAndTime02 = styled(SellerLocationAndTime01)`
   margin-top: 2px;
-  margin-left: 53px;
+  
 `;
 
 // -------------------- Product v03 -------------------------
