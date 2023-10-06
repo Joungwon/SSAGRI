@@ -401,6 +401,7 @@ const ProductName01 = styled.div`
   width: 150px;
   height: 38px;
   /* line-height: 38px; */
+  margin-left: 13px;
   font-size: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -409,6 +410,7 @@ const ProductName01 = styled.div`
   -webkit-box-orient: vertical;
 `;
 const ProductPrice01 = styled.div`
+  margin-left: 13px;
   width: 150px;
   height: 25px;
   margin-top: 2px;
@@ -444,6 +446,7 @@ const ProductPrice02 = styled(ProductPrice01)`
 `;
 const SellerLocationAndTime02 = styled(SellerLocationAndTime01)`
   margin-top: 2px;
+  margin-left: 3px;
 `;
 
 // -------------------- Product v03 -------------------------
